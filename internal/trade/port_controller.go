@@ -51,6 +51,7 @@ func (c *PortController) StartTrade() chan struct{} {
 		c.log.Infof(log.InfoColor, "Starting trade")
 		defer c.log.Infof(log.InfoColor, "Stopping trade")
 
+		c.autoconfig()
 		c.log.Infof(log.InfoColor, "Autoconfig successfully")
 
 		paySMSc, numSMSc, _, stopSMS := c.listenSMS()
@@ -414,6 +415,9 @@ func (c *PortController) detectPhone(numSMSc rxgo.Observable, stopC chan struct{
 }
 
 func (c *PortController) autoconfig() {
+	// Отключить эхо режим
+	c.gsm.Command("E0")
+
 	// PDU режим
 	c.gsm.Command("+CMGF=0") // TODO: handle error
 
