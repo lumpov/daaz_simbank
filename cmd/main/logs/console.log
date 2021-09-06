@@ -17169,3 +17169,9 @@
 {"lastFour":"9531","level":"debug","msg":"\u001b[0;36mAdd payment response: {\"status\": \"success\", \"description\": \"payment sent!\"}\u001b[0m","time":"07 Sep 21 00:55 +07"}
 {"body":"nvg.ru/receipt?fpd=888900723\u0026summa=11491\r\r\n\r\r\n","id":"1","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB1","time":"07 Sep 21 00:56 +07"}
 {"body":"МТС. Чек на 11491 руб. от 06.09.2021 20:55. ККТ 5686130035671: ofd.","id":"1","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB1","time":"07 Sep 21 00:56 +07"}
+{"body":"Поступил платеж 5488 руб. Спасибо, что пользуетесь услугами МТС!","id":"1","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB0","time":"07 Sep 21 01:12 +07"}
+{"from":"MTC","level":"info","msg":"\u001b[1;34mNew SMS received\u001b[0m","port":"/dev/ttyUSB0","text":"Поступил платеж 5488 руб. Спасибо, что пользуетесь услугами МТС!","time":"07 Sep 21 01:12 +07"}
+{"body":"Port: /dev/ttyUSB0\nFrom: MTC\nBody: Поступил платеж 5488 руб. Спасибо, что пользуетесь услугами МТС!","level":"debug","msg":"\u001b[0;36mSending email\u001b[0m","subject":"[/dev/ttyUSB0] New SMS","time":"07 Sep 21 01:12 +07"}
+{"lastFour":"4463","level":"debug","msg":"\u001b[0;36mAdd payment response: {\"status\": \"success\", \"description\": \"payment sent!\"}\u001b[0m","time":"07 Sep 21 01:12 +07"}
+{"body":"vg.ru/receipt?fpd=2163617584\u0026summa=5488\r\r\n\r\r\n","id":"1","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB0","time":"07 Sep 21 01:13 +07"}
+{"body":"МТС. Чек на 5488 руб. от 06.09.2021 21:12. ККТ 5686087023933: ofd.n","id":"2","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB0","time":"07 Sep 21 01:13 +07"}

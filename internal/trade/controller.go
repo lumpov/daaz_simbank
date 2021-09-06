@@ -70,6 +70,7 @@ func (c *Controller) executePort(port string) {
 	portC := NewPortController(gsm, comPort, c.cfg, c.api, c.bufMsgController, port)
 
 	for state := range stateC {
+		l.WithField("state", state).Infof(log.InfoColor, "New port state")
 		if state {
 			if _, ok := c.workers[port]; !ok {
 				c.workers[port] = portC.StartTrade()
