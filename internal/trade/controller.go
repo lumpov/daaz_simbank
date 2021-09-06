@@ -84,6 +84,7 @@ func (c *Controller) executePort(port string) {
 		} else {
 			if _, ok := c.workers[port]; ok {
 				close(c.workers[port])
+				c.workers[port] = nil
 			}
 		}
 	}
