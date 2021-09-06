@@ -8,6 +8,8 @@ import (
 	"milliard-easy/daaz_simbank/internal/trade"
 	"milliard-easy/daaz_simbank/log"
 	"milliard-easy/daaz_simbank/telegram"
+	"os"
+	"os/signal"
 	"strings"
 
 	"github.com/sirupsen/logrus"
@@ -65,5 +67,10 @@ func main() {
 		fmt.Sprintf("<b>Да прибудет с Вами вечный разблок! 🙏</b>"),
 	}, "\n"))
 
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt)
+	go func() {
+		tradeCont.Stop()
+	}()
 	tradeCont.Start()
 }

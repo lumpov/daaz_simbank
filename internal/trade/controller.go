@@ -55,6 +55,13 @@ func (c *Controller) Start() {
 	wg.Wait()
 }
 
+// Stop trading
+func (c *Controller) Stop() {
+	for i := range c.workers {
+		close(c.workers[i])
+	}
+}
+
 func (c *Controller) executePort(port string) {
 	l := logrus.WithField("port", port)
 
@@ -65,12 +72,11 @@ func (c *Controller) executePort(port string) {
 		return
 	}
 
-	gsm := at.New(comPort)
+	gsm := at.New(log.NewWriter(comPort, port))
 	stateC := pingPort(gsm, port)
 	portC := NewPortController(gsm, comPort, c.cfg, c.api, c.bufMsgController, port)
 
 	for state := range stateC {
-		l.WithField("state", state).Infof(log.InfoColor, "New port state")
 		if state {
 			if _, ok := c.workers[port]; !ok {
 				c.workers[port] = portC.StartTrade()
@@ -133,7 +139,7 @@ func pingPort(gsm *at.AT, port string) chan bool {
 		}
 
 		for {
-			time.Sleep(time.Second * 3)
+			time.Sleep(time.Second * 8)
 			_, err := gsm.Command("")
 			if lastState && err == at.ErrDeadlineExceeded {
 				changeState(false)
