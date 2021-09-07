@@ -17175,3 +17175,17 @@
 {"lastFour":"4463","level":"debug","msg":"\u001b[0;36mAdd payment response: {\"status\": \"success\", \"description\": \"payment sent!\"}\u001b[0m","time":"07 Sep 21 01:12 +07"}
 {"body":"vg.ru/receipt?fpd=2163617584\u0026summa=5488\r\r\n\r\r\n","id":"1","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB0","time":"07 Sep 21 01:13 +07"}
 {"body":"МТС. Чек на 5488 руб. от 06.09.2021 21:12. ККТ 5686087023933: ofd.n","id":"2","level":"info","msg":"\u001b[1;34mDeleting message\u001b[0m","port":"/dev/ttyUSB0","time":"07 Sep 21 01:13 +07"}
+{"level":"info","msg":"\u001b[1;34mRunning simbank. ©milliardeasy ©daazweb\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"count":0,"level":"info","msg":"\u001b[1;34mPort scan successfully\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"level":"fatal","msg":"\u001b[1;31mPorts not found\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"level":"info","msg":"\u001b[1;34mRunning simbank. ©milliardeasy ©daazweb\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"count":0,"level":"info","msg":"\u001b[1;34mPort scan successfully\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"level":"fatal","msg":"\u001b[1;31mPorts not found\u001b[0m","time":"08 Sep 21 01:34 +07"}
+{"level":"info","msg":"\u001b[1;34mRunning simbank. ©milliardeasy ©daazweb\u001b[0m","time":"08 Sep 21 01:35 +07"}
+{"count":0,"level":"info","msg":"\u001b[1;34mPort scan successfully\u001b[0m","time":"08 Sep 21 01:35 +07"}
+{"level":"fatal","msg":"\u001b[1;31mPorts not found\u001b[0m","time":"08 Sep 21 01:35 +07"}
+{"level":"info","msg":"\u001b[1;34mRunning simbank. ©milliardeasy ©daazweb\u001b[0m","time":"08 Sep 21 01:35 +07"}
+{"count":0,"level":"info","msg":"\u001b[1;34mPort scan successfully\u001b[0m","time":"08 Sep 21 01:35 +07"}
+{"email from":"rik.20027698@gmail.com","email to":"rik.20027698@gmail.com","level":"info","limit":"14000","msg":"\u001b[1;34mConfiguration read successfully\u001b[0m","operator":"mtc-sim","time":"08 Sep 21 01:35 +07","token":"0a335dac-cb65-4fa0-9861-e9bf8ee5d492"}
+{"level":"info","msg":"\u001b[1;34mTelegram bot successfully connected\u001b[0m","time":"08 Sep 21 01:35 +07","username":"SimBankBot"}
+{"id":758573807,"level":"debug","message":"\u003cb\u003e▶ Система активирована\u003c/b\u003e\n\n\u003cb\u003eТокен: \u003ccode\u003e0a335dac-cb65-4fa0-9861-e9bf8ee5d492\u003c/code\u003e\u003c/b\u003e\n\u003cb\u003eКоличество портов: \u003ccode\u003e0\u003c/code\u003e\u003c/b\u003e\n\u003cb\u003eОператор: \u003ccode\u003emtc-sim\u003c/code\u003e\u003c/b\u003e\n\u003cb\u003eЛимит: \u003ccode\u003e14000₽\u003c/code\u003e\u003c/b\u003e\n\u003cb\u003e\u003c/b\u003e\n\u003cb\u003eДа прибудет с Вами вечный разблок! 🙏\u003c/b\u003e","msg":"\u001b[0;36mSending telegram message\u001b[0m","time":"08 Sep 21 01:35 +07"}

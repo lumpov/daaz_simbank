@@ -44,15 +44,11 @@ func NewController(cfg *context.Config, ports []string, bot *telegram.Bot, api *
 
 // Start trading
 func (c *Controller) Start() {
-	wg := sync.WaitGroup{}
-	wg.Add(len(c.ports))
 	for i := range c.ports {
 		go func(i int) {
-			defer wg.Done()
 			c.executePort(c.ports[i])
 		}(i)
 	}
-	wg.Wait()
 }
 
 // Stop trading
@@ -84,7 +80,7 @@ func (c *Controller) executePort(port string) {
 		} else {
 			if _, ok := c.workers[port]; ok {
 				close(c.workers[port])
-				c.workers[port] = nil
+				delete(c.workers, port)
 			}
 		}
 	}

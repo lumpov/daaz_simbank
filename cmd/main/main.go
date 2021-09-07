@@ -27,9 +27,9 @@ func main() {
 
 	logrus.WithField("count", len(ports)).Infof(log.InfoColor, "Port scan successfully")
 
-	if len(ports) == 0 {
-		logrus.Fatalf(log.ErrorColor, "Ports not found")
-	}
+	// if len(ports) == 0 {
+	// 	logrus.Fatalf(log.ErrorColor, "Ports not found")
+	// }
 
 	cfg, err := context.InitConfig()
 	if err != nil {
@@ -67,10 +67,8 @@ func main() {
 		fmt.Sprintf("<b>Да прибудет с Вами вечный разблок! 🙏</b>"),
 	}, "\n"))
 
+	tradeCont.Start()
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
-	go func() {
-		tradeCont.Stop()
-	}()
-	tradeCont.Start()
+	<-c
 }

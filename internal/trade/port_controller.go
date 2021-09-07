@@ -92,13 +92,20 @@ func (c *PortController) StartTrade() chan struct{} {
 func (c *PortController) setupTariff(tariffSMSc rxgo.Observable, phone string) error {
 	// smsC := tariffSMSc.Observe()
 
+	// requestTariff := "*111*59#"
+	// changeTariff := "*111*8888*1#"
+	// removeOption1 := "*111*249*2#"
+	// removeOption2 := "*111*38*2#"
+
+	// smsC := tariffSMSc.Observe()
+
 	// TODO: Написать средство общения по CUSD в удобном виде, не только на COMMAND
 	// TODO: По возможности уйти от библиотеки и перейти в ручной режим
 
 	// TODO: получить тариф (*111*59#)
-	// TODO: убрать тариф (*111*8888#)
-	// TODO: убрать опцию "Все супер" (*111*249#)
-	// TODO: убрать опцию "Вам звонили" (*111*38#)
+	// TODO: убрать тариф (*111*8888*1#)
+	// TODO: убрать опцию "Все супер" (*111*249*2#)
+	// TODO: убрать опцию "Вам звонили" (*111*38*2#)
 
 	// cmd := "*111*59#"
 	// response, err := c.sendATasync(c.gsm, fmt.Sprintf(`+CUSD=1,"%s"`, cmd), "+CUSD")
